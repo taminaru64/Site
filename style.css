@@ -183,6 +183,7 @@ mark {
     text-align: center;
     display: grid;
     place-items: center;
+    white-space: pre-line
 }
 .game ul li .urls {
     float: left;
