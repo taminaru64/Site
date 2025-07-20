@@ -10,8 +10,8 @@ fetch(api_url)
         var clone_element = base_element[0].cloneNode(true);
         clone_element.classList.remove('js-based');
 
-        clone_element.querySelector('img').setAttribute( 'src', json[i].image );
-        clone_element.querySelector('img').setAttribute( 'alt', json[i].name );
+        clone_element.querySelector('.img').setAttribute( 'src', json[i].image );
+        clone_element.querySelector('.img').setAttribute( 'alt', json[i].name );
         clone_element.querySelector('.name').textContent = json[i].name;
         clone_element.querySelector('.text').textContent = json[i].text;
         clone_element.querySelector('.url1').setAttribute( 'href', json[i].url1 );
