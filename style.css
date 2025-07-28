@@ -251,7 +251,7 @@ mark {
     border-left: 5px solid rgb(0, 91, 170);
     border-right: 5px solid rgb(0, 91, 170);
     background-color: rgb(14, 17, 69);
-    width: 80vh;
+    width: 40%;
     box-shadow: 1px 1px 1px #888888;
 }
 
@@ -275,7 +275,7 @@ mark {
     list-style: none;
     border-left: 5px solid #aa8800ff;
     background-color: #fff6d5ff;
-    width: 30vh;
+    width: 30%;
     box-shadow: 1px 1px 1px #888888;
 }
 
