@@ -43,14 +43,13 @@ button {
 }
 
 .nav-bar ul li a {
-
     display: block;
     text-decoration: none;
     color: white;
     margin: 0;
-    font-size: clamp(0px, 3vw, 15px);
-    padding-right: 3vw;
-    padding-left: 3vw;
+    font-size: min(2vw, 20px);
+    padding-right: min(2vw, 20px);
+    padding-left: min(2vw, 20px);
 }
 .nav-bar ul li a:hover {
     background-color: #111111ff;
@@ -64,7 +63,7 @@ button {
     height: 8vh;
     text-align: left;
     margin: 0;
-    font-size: clamp(0px, 4vw, 30px);
+    font-size: 30px;
     padding-right: 20px;
     padding-left: 20px;
     display: grid;
@@ -86,7 +85,6 @@ button {
 
 
 h2 {
-    word-break: keep-all;
     font-size: 30px;
     padding: 0;
     margin: 0;
@@ -251,15 +249,16 @@ mark {
     border-left: 5px solid rgb(0, 91, 170);
     border-right: 5px solid rgb(0, 91, 170);
     background-color: rgb(14, 17, 69);
-    width: 40%;
+    width: min(80vw, 500px);
     box-shadow: 1px 1px 1px #888888;
 }
 
 .discord ul li a {
+    overflow-wrap: break-word;
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 3.5vh;
+    font-size: 30px;
     width: 100%;
     height: 100%;
 }
@@ -275,15 +274,16 @@ mark {
     list-style: none;
     border-left: 5px solid #aa8800ff;
     background-color: #fff6d5ff;
-    width: 30%;
+    width: min(80vw, 250px);
     box-shadow: 1px 1px 1px #888888;
 }
 
 .sns ul li a {
+    overflow-wrap: break-word;
     display: block;
     text-decoration: none;
     color: black;
-    font-size: 3.5vh;
+    font-size: 30px;
     width: 100%;
     height: 100%;
 }
@@ -321,7 +321,7 @@ mark {
     border-bottom: 1px solid #aa8800ff;
     margin-right: 0px;
     margin-left: 10px;
-    width: 200px;
+    width: min(80vw, 200px);
     height: 40px;
 }
 .footer ul li a:hover {
