@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(font.ttf);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'MyFont';
+}
+button {
+    font-family: 'MyFont';
+}
+
+
+.nav-bar {
+    width: 100%;
+    height: 8vh;
+    background-color: #2b2200ff;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+.nav-bar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    word-break: keep-all;
+}
+.nav-bar ul li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    line-height: 8vh;
+    border-left: 1px solid #aa8800ff;
+    background-color: #2b2200ff;
+    display:inline; 
+    padding:0 0px;
+}
+
+.nav-bar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    font-size: min(2vw, 20px);
+    padding-right: min(2vw, 20px);
+    padding-left: min(2vw, 20px);
+}
+.nav-bar ul li a:hover {
+    background-color: #111111ff;
+}
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+}
+.nav-bar h1 {
+    float: left;
+    height: 8vh;
+    text-align: left;
+    margin: 0;
+    font-size: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: grid;
+    place-items: center;
+    word-break: keep-all;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-image: url(Banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+h2 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    border-left: solid 10px #aa8800ff;
+    border-right: solid 10px #aa8800ff;
+    border-top: dashed 1px #aa8800ff;
+    border-bottom: dashed 1px #aa8800ff;
+}
+
+p {
+    font-size: 25px;
+    padding: 0;
+    margin: 5px;
+    margin-left: 30px;
+    color: black;
+    letter-spacing: -0.1em;
+}
+hr {
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px;
+    border-top: 1px dashed #aa8800ff;
+}
+mark {
+    background: linear-gradient(transparent 60%, #ffd42aff 0%);;
+}
+
+.anchor {
+    margin-top: -100px;
+    float: inline-start;
+}
+
+.game ul {
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    overflow-y: hidden;
+    border: 2px solid #aa8800ff;
+    height: auto;
+}
+
+.game ul li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border-right: 1px solid #aa8800ff;
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 450px;
+    flex-shrink: 0;
+    height: auto;
+}
+
+.game ul li div {
+    width: 100%;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+}
+.game ul li div .img {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.game ul li .explanation {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: auto;
+}
+.game ul li .explanation h3 {
+    word-break: keep-all;
+    font-size: 25px;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    color: black;
+    width: 60%;
+    height: 5vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border-bottom: 3px solid #aa8800ff;
+}
+.game ul li .explanation p {
+    font-size: 15px;
+    margin: 0;
+    margin-right: auto;
+    padding: 0;
+    color: black;
+    width: 100%;
+    height: calc(100% - 5vh);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    white-space: pre-line;
+}
+.game ul li .urls {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.game ul li .urls a {
+    background-color: #fff6d5ff;
+    border: none;
+    font-size: 18px;
+    letter-spacing: -0.1em;
+    text-align:center;
+    text-decoration: none;
+    color: black;
+    margin: 6px;
+    width: 90%;
+    height:5vh;
+    line-height: 5vh;
+    border-left: 5px solid #aa8800ff;
+    box-shadow: 1px 1px 1px #888888;
+}
+.game ul li .urls a:hover {
+    background-color: #ffeeaaff;
+}
+
+.js-based {
+    display: none;
+    position: absolute;
+    top: -9999px; 
+    left: -9999px;
+}
+.js-based * {
+    display: none;
+    
+}
+.game ul .loading {
+    width: 99.9%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    text-align:center;
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+.discord ul {
+    margin: 0;
+    padding: 0;
+}
+.discord ul li {
+    list-style: none;
+    border-left: 5px solid rgb(0, 91, 170);
+    border-right: 5px solid rgb(0, 91, 170);
+    background-color: rgb(14, 17, 69);
+    width: min(80vw, 500px);
+    box-shadow: 1px 1px 1px #888888;
+}
+
+.discord ul li a {
+    overflow-wrap: break-word;
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+}
+.discord ul li a:hover {
+    background-color: rgb(22, 27, 116);
+}
+
+.sns ul {
+    margin: 0;
+    padding: 0;
+}
+.sns ul li {
+    list-style: none;
+    border-left: 5px solid #aa8800ff;
+    background-color: #fff6d5ff;
+    width: min(80vw, 250px);
+    box-shadow: 1px 1px 1px #888888;
+}
+
+.sns ul li a {
+    overflow-wrap: break-word;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+}
+.sns ul li a:hover {
+    background-color: #ffeeaaff;
+}
+
+.footer {
+    width: 100%;
+    height: 250px;
+    background-color: #2b2200ff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+}
+
+.footer ul li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    line-height: 40px;
+}
+.footer ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: #2b2200ff;
+    border-bottom: 1px solid #aa8800ff;
+    margin-right: 0px;
+    margin-left: 10px;
+    width: min(80vw, 200px);
+    height: 40px;
+}
+.footer ul li a:hover {
+    background-color: #111111ff;
+}
+
+.footer p {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

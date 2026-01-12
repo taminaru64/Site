@@ -1,149 +1,204 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <script src="dataGet.js"></script>
-    <title>たみなるサイト</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.ico">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-PZK3JBQ5');
-    </script>
-    <!-- End Google Tag Manager -->
-</head>
-
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZK3JBQ5"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <nav class="nav-bar">
-        <h1><a href="">たみなるサイト</a></h1>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
-            <li><a href="#home">ホーム</a></li>
-            <li><a href="#game">ゲーム</a></li>
-            <li><a href="#about-me">自己紹介</a></li>
-            <li><a href="#discord">Discordコミュニティー</a></li>
-            <li><a href="#sns">SNS</a></li>
-        </ul>
-    </nav>
-
-    <header class="header">
-    </header>
-    <center>
-        <div class="home">
-            <h2>ホーム</h2><a id="home" class="anchor"></a>
-            <p>
-                たみなるサイトへようこそ！<br>
-                ここでは、たみなるが開発したゲームで遊べるよ！<br>
-                また、たみなるの自己紹介やSNSのリンクもあるので、<br>
-                ぜひ、見に行ってね！
-            </p>
-        </div>
-
-        <div class="game">
-            <h2>ゲーム</h2><a id="game" class="anchor"></a>
-            <ul>
-                <li class="loading">
-                    <h3>最新のゲームを読み込み中...</h3>
-                </li>
-                <li class="game-info js-based">
-                    <div class="image">
-                        <img class="img" src="/" alt="">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>たみなるサイト</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="icon.ico">
+    </head>
+    <body>
+        <nav class="menu">
+            <h1>たみなるサイト</h1>
+            <details>
+                <summary>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </summary>
+                <div class="content">
+                    <div class="list">
+                        <a href="#first">始めに</a>
+                        <a href="#game">ゲーム</a>
+                        <a href="#about-me">自己紹介</a>
+                        <a href="#sns">SNS</a>
+                        <a href="#discord">Discord</a>
                     </div>
-                    <div class="explanation">
-                        <h3 class="name"></h3>
-                        <p class="text"></p>
+                </div>
+            </details>
+        </nav>
+        <div class="canvas">
+            <div class="background" style="--zpos: -50px; --scale: 1.8" id="background"></div>
+            <div class="backview" id="backview">
+                <img class="image" src="img/Planet-Ao.png" style="--radius: 200px; --xpos: -40dvw; --ypos: 5%; --zpos: -20px; --rotate: 0deg;"></img>
+                <img class="image" src="img/Planet-Aka.png" style="--radius: 120px; --xpos: -30dvw; --ypos: 25%; --zpos: -10px; --rotate: 0deg;"></img>
+                <img class="image" src="img/Planet-DaiDai.png" style="--radius: 300px; --xpos: -50dvw; --ypos: 55%; --zpos: -30px; --rotate: 0deg;"></img>
+                <img class="image" src="img/Planet-Midori.png" style="--radius: 200px; --xpos: -50dvw; --ypos: 85%; --zpos: -40px; --rotate: 0deg;"></img>
+            </div>
+            <div class="frontview" id="frontview">
+                <img class="image" src="img/Player.png" style="--radius: 200px; --xpos: 30dvw; --ypos: 10%; --zpos: 20px; --rotate: -120deg;"></img>
+                <img class="image" src="img/Planet-Ki.png" style="--radius: 100px; --xpos: -35dvw; --ypos: 40%; --zpos: 20px; --rotate: 0deg;"></img>
+                <img class="image" src="img/Planet-Kuro.png" style="--radius: 100px; --xpos: 30dvw; --ypos: 45%; --zpos: 35px; --rotate: 0deg;"></img>
+                <img class="image" src="img/Planet-Shiro.png" style="--radius: 100px; --xpos: 40dvw; --ypos: 65%; --zpos: 10px; --rotate: 0deg;"></img>
+                <img class="image" src="img/Planet-Ao.png" style="--radius: 120px; --xpos: 35dvw; --ypos: 90%; --zpos: 20px; --rotate: 0deg;"></img>
+            </div>
+            <div class="view" id="view">
+                <div class="topview">
+                    <div class="content">
+                        <h2>たみなるサイト</h2>
+                        <p>
+                            <a href="https://taminaru64.github.io/Littlaxy" target="_blank" rel="noopener noreferrer">最新作「リトラクシー」公開中！</a>
+                        </p>
                     </div>
-                    <div class="urls">
-                        <a class="url1" href="/">公式サイトから遊ぶ</a>
-                        <a class="url2" href="/">unityroomから遊ぶ</a>
-                        <a class="url3" href="/">itch.ioから遊ぶ</a>
+                </div>
+                <main>
+                    <div class="cardview" id="first">
+                        <div class="title">
+                            <h2>始めに</h2>
+                            <h3>- First -</h3>
+                        </div>
+                        <p>
+                            たみなるサイトへようこそ！<br>
+                            ここでは、たみなるが開発したゲームで遊べるよ！<br>
+                            また、たみなるの自己紹介やSNSのリンクもあるので、<br>
+                            ぜひ、見に行ってね！
+                        </p>
                     </div>
-                </li>
-            </ul>
+                    <div class="cardview" id="game">
+                        <div class="title">
+                            <h2>ゲーム</h2>
+                            <h3>- Game -</h3>
+                        </div>
+                        <div class="list">
+                            <div class="work">
+                                <h4>パントリー</h4>
+                                <p>
+                                    パンのパズルゲーム！パンを整理整頓♪<br>
+                                    縦・横・斜めに一列に4つそろうと<br>
+                                    パンが消えて、スコアゲット！<br>
+                                    記録更新目指して頑張ろう！！<br>
+                                </p>
+                                <div class="img">
+                                    <img src="game/Pantry/Title.png">
+                                </div>
+                                <div class="buttons">
+                                    <button onclick="window.open('https://taminaru64.github.io/Pantry')">公式サイト</button>
+                                    <button onclick="window.open('https://unityroom.com/games/pantry')">unityroom</button>
+                                    <button onclick="window.open('https://taminaru64.itch.io/pantry')">itch.io</button>
+                                </div>
+                            </div>
+                            <div class="work">
+                                <h4>落し寿司</h4>
+                                <p>
+                                    うちゃーなー、寿司は握らねぇ<br>
+                                    寿司を乗せるんだよー！
+                                </p>
+                                <div class="img">
+                                    <img src="game/OtoshiSushi/Title.png">
+                                </div>
+                                <div class="buttons">
+                                    <button onclick="window.open('https://taminaru64.github.io/OtoshiSushi/')">公式サイト</button>
+                                    <button onclick="window.open('https://unityroom.com/games/otoshi-sushi')">unityroom</button>
+                                    <button onclick="window.open('https://taminaru64.itch.io/otoshi-sushi')">itch.io</button>
+                                </div>
+                            </div>
+                            <div class="work">
+                                <h4>エイ円</h4>
+                                <p>
+                                    ただ円の中に落ちていくだけのゲーム<br>
+                                    音もない、色も2色<br>
+                                    なのになぜか何度もチャレンジしてしまう
+                                </p>
+                                <div class="img">
+                                    <img src="game/Eien/Title.png">
+                                </div>
+                                <div class="buttons">
+                                    <button onclick="window.open('https://taminaru64.github.io/Eien/')">公式サイト</button>
+                                    <button onclick="window.open('https://unityroom.com/games/eien')">unityroom</button>
+                                    <button onclick="window.open('https://taminaru64.itch.io/eien')">itch.io</button>
+                                </div>
+                            </div>
+                            <div class="work">
+                                <h4>リトラクシー</h4>
+                                <p>
+                                    生まれて間もない小さな宇宙「リトラクシー」を<br>
+                                    「コメット」と一緒に調査しよう！
+                                </p>
+                                <div class="img">
+                                    <img src="game/Littlaxy/Title.png">
+                                </div>
+                                <div class="buttons">
+                                    <button onclick="window.open('https://taminaru64.github.io/Littlaxy/')">公式サイト</button>
+                                    <button onclick="window.open('https://unityroom.com/games/littlaxy')">unityroom</button>
+                                    <button onclick="window.open('https://taminaru64.itch.io/littlaxy')">itch.io</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardview" id="about-me">
+                        <div class="title">
+                            <h2>自己紹介</h2>
+                            <h3>- About Me -</h3>
+                        </div>
+                        <p>
+                            こんにちは、高校生ゲームクリエーター、たみなるです！<br>
+                            Webで遊べるゲームの開発をしながら、ゲーム開発に役立つ情報を発信しています。<br>
+                            ゲームを遊ぶ人も、作る人も楽しめるコンテンツを目指しています。<br>
+                            ぜひ、これからの応援よろしくおねがいします！
+                        </p>
+                    </div>
+                    <div class="cardview" id="sns">
+                        <div class="title">
+                            <h2>各種SNSでも活動中！</h2>
+                            <h3>- SNS -</h3>
+                        </div>
+                        <table>
+                            <tr><td><a href="https://youtube.com/@taminaru64" target="_blank" rel="noopener noreferrer">Youtube(たみなる)</a></td><td>旧Youtubeチャンネル</td></tr>
+                            <tr><td><a href="https://youtube.com/@littlaxy-to-player" target="_blank" rel="noopener noreferrer">Youtube(インディーゲーム開発チャンネル)</a></td><td>たみなるのゲームを紹介・宣伝するためのYoutubeチャンネル</td></tr>
+                            <tr><td><a href="https://youtube.com/@littlaxy-to-creator" target="_blank" rel="noopener noreferrer">Youtube(Unity完全解説チャンネル)</a></td><td>Unityでゲーム開発をする上で役立つ情報を発信するYoutubeチャンネル</td></tr>
+                            <tr><td><a href="https://x.com/taminaru64" target="_blank" rel="noopener noreferrer">X</a></td><td>ゲームや動画の宣伝をしてみたり、思ったことを言ってみたり</td></tr>
+                            <tr><td><a href="https://note.com/taminaru64" target="_blank" rel="noopener noreferrer">note</a></td><td>Unityを得意にするための情報を発信中！</td></tr>
+                        </table>
+                    </div>
+                    <div class="cardview" id="discord">
+                        <div class="title">
+                            <h2>Discordサーバー「【企画・プログラム・デザイン・サウンド】でゲームづくり！」募集中！</h2>
+                            <h3>- Discord -</h3>
+                        </div>
+                        <p>
+                            Discordコミュニティー「次世代のクリエーターラボ」を公開中！<br>
+                            【企画・プログラム・デザイン・サウンド】に詳しい人、興味がある人は大歓迎です！学生・初心者も大歓迎です！<br>
+                            開発の質問、開発メンバーの募集、結成が出来ます！クリエーターでなくても参加OKです。<br>
+                            ぜひ皆さんも参加して充実した空間を作っていきましょう！
+                        </p>
+                        <div class="buttons">
+                            <button onclick="window.open('https://discord.com/invite/8jDT54aZ7x')">参加はこちらから！</button>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <div class="content">
+                        <h2>
+                            <a href="https://taminaru64.github.io/Site/" rel="noopener noreferrer">たみなるサイト</a>
+                        </h2>
+                        <div class="urls">
+                            <a href="https://taminaru64.github.io/Site/old/" rel="noopener noreferrer">旧サイト</a>
+                            <a href="https://youtube.com/@taminaru64" target="_blank" rel="noopener noreferrer">Youtube(旧チャンネル)</a>
+                            <a href="https://youtube.com/@littlaxy-to-player" target="_blank" rel="noopener noreferrer">Youtube(遊ぶ人へ)</a>
+                            <a href="https://youtube.com/@littlaxy-to-creator" target="_blank" rel="noopener noreferrer">Youtube(創る人へ)</a>
+                            <a href="https://x.com/taminaru64" target="_blank" rel="noopener noreferrer">X</a>
+                            <a href="https://note.com/taminaru64" target="_blank" rel="noopener noreferrer">note</a>
+                            <a href="https://github.com/taminaru64" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://unityroom.com/users/taminaru64" target="_blank" rel="noopener noreferrer">unityroom</a>
+                            <a href="https://taminaru64.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
+                        </div>
+                        <p>
+                            制作: たみなる
+                        </p>
+                    </div>
+                </footer>
+            </div>
         </div>
-
-        <div class="about-me">
-            <h2>自己紹介</h2><a id="about-me" class="anchor"></a>
-            <p>
-                こんにちは、<mark>高校生ゲームクリエーター</mark>、たみなるです！<br>
-                Webで遊べるゲームの開発をしながら、ゲーム開発に役立つ情報を発信しています。<br>
-                <mark>ゲームを遊ぶ人も、作る人も楽しめるコンテンツ</mark>を目指しています。<br>
-                ぜひ、これからの応援よろしくおねがいします！<br>
-            </p>
-        </div>
-
-        <div class="discord">
-            <h2>Discordサーバー「次世代のクリエーターラボ」開設！</h2><a id="discord" class="anchor"></a>
-            <p>
-                Discordコミュニティー「次世代のクリエーターラボ」を公開中！<br>
-                【企画・プログラム・デザイン・サウンド】に詳しい人、興味がある人は大歓迎です！学生・初心者も大歓迎です！<br>
-                開発の質問、開発メンバーの募集、結成が出来ます！クリエーターでなくても参加OKです。<br>
-                ぜひ皆さんも参加して充実した空間を作っていきましょう！<br>
-            </p>
-            <ul>
-                <li>
-                    <a href="https://discord.com/invite/8jDT54aZ7x">
-                        <h3>「次世代のクリエーターラボ」に参加！</h3>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sns">
-            <h2>SNS</h2><a id="sns" class="anchor"></a>
-            <ul>
-                <li>
-                    <a href="https://www.youtube.com/@taminaru64">
-                        <h3>Youtube</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/taminaru64">
-                        <h3>X</h3>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://unityroom.com/users/taminaru64">
-                        <h3>unityroom</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://taminaru64.itch.io/">
-                        <h3>itch.io</h3>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <footer class="footer">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#game">GAME</a></li>
-                <li><a href="#about-me">ABOUT ME</a></li>
-                <li><a href="#sns">SNS</a></li>
-            </ul>
-            <p>制作：たみなる</p>
-        </footer>
-    </center>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>
